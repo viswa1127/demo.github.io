@@ -2,90 +2,100 @@
 <html>
     <head>
         <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+            .menu{
+                display: flex;
+                float: right;
+                gap: 1em;
+                font-size: 18px;
+                align-items: center;
+              
+            }
+            .Navbar{
+                background-color: blue;
+                padding: 30px;
+                align-items: center;
+    
             }
             body{
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
-
             a{
                 text-decoration: none;
+                color: aliceblue;
             }
             li{
                 list-style: none;
-            }
-            .Navbar{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px;
-                background-color: darkblue;
-                color: aliceblue;
-
-            }
-            .Nav-links a{
-                color: aliceblue;
-            }
-            .logo{
-                font-size: 32px;
-            }
-            .menu{
-                display:flex;
-                gap:1em;
-                font-size: 18px;
+                
             }
             .menu li{
-                padding: 5px 14px;
-
+                padding:5px 14px;
+                
+                
             }
-            .menu li:hover{
+            .menu li:hover {
                 background-color: aqua;
                 border-radius: 5px;
-                transition: .3s ease;
+                transition: 0.3s ease;
 
             }
+            .pages{
+                position: relative;
+            }
+            .dropdown{
+                background-color: rgb(1,139,139);
+                padding: 1em 0;
+                position: absolute;
+                display: none;
+                top: 35px;
+            }
+            .dropdown li:hover {
+                background-color: chartreuse;
+            
 
-
-
+            }
+            .pages:hover .dropdown {
+                display: block;
+            }
+           .image {
+            background-size: cover;
+            
+           } 
 
         </style>
-
-
     </head>
     <body>
-        <Nav class="Navbar">
-            <div class="logo">DEMO</div>
+      <nav class="Navbar">
+        <div class="logo">
+            <label>&#9976</label>
+            <label>Icon</label>
+       
 
-            <ul class="Nav-links">
-                <input type="checkbox" id="checkbox_toggle">
-                <label for="checkbox_toggle" class="hamburger">&#9976</label>
-
-                <div class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li class="services"><a href="#">Services</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Dropdown1</a></li>
-                            <li><a href="#">Dropdown2</a></li>
-                            <li><a href="#">Dropdown3</a></li>
-                            <li><a href="#">Dropdown4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
-
-                </div>
+            
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Price</a></li>
+                <li><a href="#">Products</a></li>
+                   <li class="pages"><a href="#">Pages</a>
+                       <ul class="dropdown">
+                           <li><a href="#">pages1</a></li>
+                           <li><a href="#">pages2</a></li>
+                           <li><a href="#">pages3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contact</a></li>
+                
             </ul>
+     </nav>
+            
+            
+            <label class="image"><img src="https://cdn.pixabay.com/photo/2016/11/02/10/04/chicago-1791002_1280.jpg" ></label>
+            
+                
 
-        </Nav>
-
-
-
-
-
+        </div>
     </body>
+
 
 </html>
